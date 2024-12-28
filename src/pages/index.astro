@@ -1,14 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
+import Email from "../icons/Email.astro";
 import Github from "../icons/Github.astro";
 import Linkedin from "../icons/Linkedin.astro";
 import SocialPill from "../components/SocialPill.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout
+	title="Portfolio saav - React Native Developer"
+	description="React Native / Expo Developer"
+>
 	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-44">
+		<SectionContainer class="py-44">
 			<h1
 				class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4"
 			>
@@ -28,15 +34,25 @@ import SocialPill from "../components/SocialPill.astro";
 
 			<nav class="flex gap-x-2 mt-18">
 				<SocialPill>
-					<Linkedin class="w-6 h-6 fill-white" />
+					<Linkedin class="size-8 fill-white" />
 					Linkedin
 				</SocialPill>
 
 				<SocialPill>
-					<Github class="w-6 h-6 fill-white" />
+					<Github class="size-8 fill-white" />
 					Github
 				</SocialPill>
+
+				<SocialPill>
+					<Email class="size-8 fill-white" />
+					saavalencia97@gmail.com
+				</SocialPill>
 			</nav>
-		</section>
+		</SectionContainer>
+
+		<SectionContainer id="experience">
+			<h2 class="text-2xl font-semibold mb-10">Experiencia laboral</h2>
+			<Experience />
+		</SectionContainer>
 	</main>
 </Layout>
