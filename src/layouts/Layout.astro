@@ -21,9 +21,27 @@ const { description, title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <Header />
     <slot />
   </body>
 </html>
+
+<script>
+  const buttonThemeBlue = document.querySelector("#btn1");
+  buttonThemeBlue?.addEventListener("click", () => {
+    changeBackgroundImage("/blue_wall.jpg");
+  });
+  const buttonRefBlue = document.querySelector("#btn2");
+  buttonRefBlue?.addEventListener("click", () => {
+    changeBackgroundImage("/ski.jpg");
+  });
+
+  function changeBackgroundImage(newImage) {
+    console.log({ newImage });
+    document.body.style.backgroundImage = `url(${newImage})`;
+  }
+</script>
+
 <style is:global>
   :root {
     color-scheme: light dark;
@@ -33,7 +51,7 @@ const { description, title } = Astro.props;
   }
 
   body {
-    /* background: #050505; */
+    /* background-image: url("/blue_wall.jpg"); */
     background-image: url("/blue_wall.jpg");
     background-size: cover;
     display: flex;
