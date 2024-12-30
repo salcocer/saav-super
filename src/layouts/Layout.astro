@@ -36,8 +36,7 @@ const { description, title } = Astro.props;
     changeBackgroundImage("/ski.jpg");
   });
 
-  function changeBackgroundImage(newImage) {
-    console.log({ newImage });
+  function changeBackgroundImage(newImage: string) {
     document.body.style.backgroundImage = `url(${newImage})`;
   }
 </script>
