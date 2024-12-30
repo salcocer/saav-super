@@ -1,58 +1,35 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
-import Email from "../icons/Email.astro";
-import Github from "../icons/Github.astro";
-import Linkedin from "../icons/Linkedin.astro";
-import SocialPill from "../components/SocialPill.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Education from "../components/Education.astro";
 import Experience from "../components/Experience.astro";
-import SectionContainer from "../components/SectionContainer.astro";
+import Profile from "../components/Profile.astro";
+import Projects from "../components/Projects.astro";
+import Technologies from "../components/Technologies.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
-	title="Portfolio saav - React Native Developer"
-	description="React Native / Expo Developer"
+  title="Portfolio saav - React Native Developer"
+  description="React Native / Expo Developer"
 >
-	<main>
-		<SectionContainer class="py-44">
-			<h1
-				class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4"
-			>
-				Hey, soy Alejandro
-				<a
-					href="https://www.linkedin.com/in/%F0%9F%91%8Balejandro-a-218939202/"
-					rel="noopener"
-					target="_blank"
-					class="flex justify-content items-center"
-				>
-					<Badge>Diponible para trabajar</Badge>
-				</a>
-			</h1>
-			<h2 class="text-2xl">
-				5 años de experiencia. Crear soluciones web.
-			</h2>
-
-			<nav class="flex gap-x-2 mt-18">
-				<SocialPill>
-					<Linkedin class="size-8 fill-white" />
-					Linkedin
-				</SocialPill>
-
-				<SocialPill>
-					<Github class="size-8 fill-white" />
-					Github
-				</SocialPill>
-
-				<SocialPill>
-					<Email class="size-8 fill-white" />
-					saavalencia97@gmail.com
-				</SocialPill>
-			</nav>
-		</SectionContainer>
-
-		<SectionContainer id="experience">
-			<h2 class="text-2xl font-semibold mb-10">Experiencia laboral</h2>
-			<Experience />
-		</SectionContainer>
-	</main>
+  <main
+    class="max-w-4xl m-auto grid grid-cols-2 lg:grid-cols-4 lg:grid-rows-6 gap-3"
+  >
+    <div class="lg:row-span-2 lg:row-start-1"><Profile /></div>
+    <div class="lg:col-span-2 lg:row-span-2"><Education /></div>
+    <div class="lg:row-span-4 lg:col-start-4"><AboutMe /></div>
+    <div class="lg:col-span-2 lg:row-span-2">
+      <Technologies />
+    </div>
+    <div class="lg:row-span-4 lg:row-start-3"><Projects /></div>
+    <div class="lg:col-span-4 lg:row-span-5 lg:col-start-2 lg:row-start-5">
+      <Experience />
+    </div>
+  </main>
+  <!-- <main class="max-w-6xl m-auto grid grid-cols-2 lg:grid-rows-3 lg:grid-cols-3">
+    <Profile />
+    <Education />
+    <AboutMe />
+    <Experience />
+  </main> -->
 </Layout>

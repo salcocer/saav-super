@@ -1,37 +1,29 @@
 ---
-import ExperienceItem from "./ExperienceItem.astro";
 
-const EXPERIENCE = [
-    {
-        date: "February 2022",
-        title: "Application UI code in Tailwind CSS",
-        description:
-            "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
-        link: "#",
-    },
-    {
-        date: "February 2022",
-        title: "Application UI code in Tailwind CSS",
-        description:
-            "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
-        link: "#",
-    },
-    {
-        date: "February 2022",
-        title: "Application UI code in Tailwind CSS",
-        description:
-            "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
-        link: "#",
-    },
-];
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700">
-    {
-        EXPERIENCE.map((exp) => (
-            <li class="mb-10 ms-4">
-                <ExperienceItem {...exp} />
-            </li>
-        ))
-    }
-</ol>
+<div
+  class="ml-[25px] w-[635px] h-fit bg-black/20 backdrop-blur-lg rounded-lg shadow-lg text-white flex-col items-start"
+>
+  <div
+    class="p-6 bg-black/10 backdrop-blur-lg h-1 flex items-center rounded-t-lg"
+  >
+    <h2 class="text-lg font-semibold text-white">Experience</h2>
+  </div>
+  <div class="p-6">
+    <div class="flex flex-row justify-between">
+      <p class="text-md text-white">
+        · T-Systems, Barcelona - Mobile Developer
+      </p>
+      <p class="text-sm text-white italic">June 2022 - Present</p>
+    </div>
+    <div class="flex flex-row justify-between mt-3">
+      <p class="text-md text-white">· Idrica, Valencia - FrontEnd Developer</p>
+      <p class="text-sm text-white italic">April 2021 - June 2022</p>
+    </div>
+    <div class="flex flex-row justify-between mt-3">
+      <p class="text-md text-white">· Pccom, Alicante - Mobile Developer</p>
+      <p class="text-sm text-white italic">March 2018 - May 2021</p>
+    </div>
+  </div>
+</div>
