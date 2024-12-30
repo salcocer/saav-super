@@ -1,5 +1,6 @@
 ---
 import AboutMe from "../components/AboutMe.astro";
+import DownloadCV from "../components/DownloadCV.astro";
 import Education from "../components/Education.astro";
 import Experience from "../components/Experience.astro";
 import Profile from "../components/Profile.astro";
@@ -33,20 +34,24 @@ import Layout from "../layouts/Layout.astro";
     </div>
 
     <div
-      class="absolute bottom-100 left-1/2 transform -translate-x-1/2 p-4 w-[300px] h-16 relative bg-black/20
+      class="absolute bottom-100 left-1/2 transform -translate-x-1/2 p-4 w-[330px] h-16 relative bg-black/20
       backdrop-blur-lg rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-4 transition-transform duration-300
       text-white flex flex-row items-center justify-between border border-transparent hover:border-blue-500"
     >
-      <SocialPill href="https://github.com/stalynAlejandro">
+      <SocialPill href="https://github.com/stalynAlejandro" title="Github">
         <Github class="w-10 h-10" />
       </SocialPill>
       <SocialPill
         href="https://www.linkedin.com/in/%F0%9F%91%8Balejandro-a-218939202/"
+        title="Linkedin"
       >
         <Linkedin class="w-10 h-10" />
       </SocialPill>
-      <SocialPill href="mailto:saavalencia97@gmail.com">
+      <SocialPill href="mailto:saavalencia97@gmail.com" title="Email me">
         <Email class="w-10 h-10" />
+      </SocialPill>
+      <SocialPill>
+        <DownloadCV class="w-10 h-10" fileUrl="Alejandro_CV.pdf" />
       </SocialPill>
     </div>
   </main>
